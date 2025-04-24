@@ -1,11 +1,6 @@
 CREATE DATABASE ecommerce;
 use ecommerce;
 
--- Drop tables if they already exist (for re-run convenience)
-DROP TABLE IF EXISTS product_image, product_attribute, product_item, product_variation,
-size_option, size_category, color, product, brand, product_category,
-attribute_type, attribute_category;
-
 -- Brand Table
 CREATE TABLE brand (
     brand_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -44,7 +39,7 @@ CREATE TABLE product_image (
 CREATE TABLE color (
     color_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    hex_code CHAR(7) -- e.g., #FFFFFF
+    hex_code CHAR(7) 
 );
 
 -- Size Category Table
